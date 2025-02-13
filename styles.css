@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap');
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height:100%;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff8fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #7a0811;
+    font-family: "Emilys Candy", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 3rem;
+    margin-top: 0;
+}
+
+.card {
+    width: 340px;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1)
+}
+
+p {
+    font-size: 1.2rem;
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    width: 50%;
+    padding: 4px;
+    border: 1px solid #7a0811;
+    background-color: transparent;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.1s;
+    width: 150px;  
+}
+
+button:hover {
+    background-color: #7a0811;
+    color:white;
+} 
+
+#yes {
+    background-color: lightgreen;
+}
+
+#no {
+    background-color: lightcoral;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+span {
+    font-weight: bold;
+    color: #cc3d39;
+}
+
+#birds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
