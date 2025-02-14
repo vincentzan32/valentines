@@ -45,7 +45,7 @@ noButton.addEventListener("click", () => {
     yesScale += 0.05;
     yesButton.style.transform = `scale(${yesScale})`;
 
-    noScale -= 0.0;
+    noScale -= 0.00;
     noButton.style.transform = `scale(${noScale})`;
 
     teleportButton(noButton);
@@ -81,25 +81,42 @@ function teleportButton(button) {
 
     button.style.position = 'absolute';
     button.style.left = `${randomX}px`;
-button.style.top = `${randomY}px`;
+    button.style.top = `${randomY}px`;
 }
 
-window.onload = function() {
-    showSlides();  // Start the slideshow after everything has loaded
-    setInterval(showSlides, 3000);
-};
+const imagePaths = [
+    "soph.photo.1.jpg",
+    "soph.photo.2.jpg",
+    "soph.photo.3.jpg",
+    "soph.photo.4.jpg",
+    "soph.photo.5.jpg",
+    "soph.photo.6.jpg",
+    "soph.photo.7.jpg",
+    "soph.photo.8.jpg",
+    "soph.photo.9.jpg",
+    "soph.photo.10.jpg"
+];
 
-let slideIndex = 0;
+const slides = document.querySelectorAll(".slideshow img");
+let currentIndex = 0;
 
-function showSlides() {
-    let slides = document.getElementsByClassName("mySlides");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none"; // Hide all slides
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) { slideIndex = 1; } // Loop back to the first slide
-    slides[slideIndex - 1].style.display = "block"; // Show the current slide
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
+function showSlide(index) {
+    slides.forEach((img, i) => {
+        if (i === index) {
+            img.classList.add("active");
+        } else {
+            img.classList.remove("active");
+        }
+    });
 }
 
-showSlides(); // Run the slideshow
+function showNextImage() {
+    currentIndex = (currentIndex + 1) % slides.length;
+    showSlide(currentIndex);
+}
+
+// Start with the first slide active
+showSlide(currentIndex);
+
+// Change image every 5 seconds
+setInterval(showNextImage, 5000);

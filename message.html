@@ -11,28 +11,11 @@
     <script src="vanta.birds.min.js"></script>
 </head>
 <body>
-
-    <h1>Memories</h1>
-    
-    <!-- Container for both the card and the slideshow -->
-    <div class="container">
-        
-        <!-- Card Content -->
-        <div class="card">
-            <h1>To Sophie:</h1>
-            <p>ignore.</p>
-            <p>ignore.</p>
-            <p>ignore.</p>
-            <p>We have a dinner reservation at Kazumi Omakase on March 15th at 6 PM. (Attire: Wear a nice dress!)</p>
-            <a href="https://kazuminy.com/">
-                <button id="rest">Go to Restaurant Website</button>
-            </a>
-            <p><span>Love,</span> <br> Vincent <3</p>
-            <audio id="background-music" autoplay loop>
-                <source src="61. Lauv - I Like Me Better.mp3" type="audio/mpeg">
-            </audio>
+    <div class = "mainContainer">
+        <div class = "slideshowContainer">
+            <h1>Memories</h1>
+            <img id = 'Soph' src = "igaveupcollage.jpg" alt = "Sophie">
         </div>
-        
         <!-- Slideshow container -->
         <div class="slideshow-container">
             <div class="mySlides">
@@ -58,36 +41,28 @@
                 <img class="mySlides fade" src="soph.photo.10.jpg" alt="Image 10">
             </div>
         </div>
-
+    <!-- Container for both the card and the slideshow -->
+    <div class="container">
+        
+        <!-- Card Content -->
+        <div class="card">
+            <h1>To Sophie:</h1>
+            <p>I'm so glad you said yes! Thank you for being such an important part of my life.</p>
+            <p>I'm so grateful that I get to wake up every morning to a text from you and go to bed every night after a call with you.</p>
+            <p>I really wish I could have made it back for Valentine's Day this year, but I'll make it up to you with this.</p>
+            <p>I made a dinner reservation for us at Kazumi Omakase on March 15th at 6 PM. (Attire: Wear a nice dress!)</p>
+            <a href="https://kazuminy.com/">
+                <button id="rest">Go to Restaurant Website</button>
+            </a>
+            <p><span>Love,</span> <br> Vincent <3</p>
+            <audio id="background-music" autoplay loop>
+                <source src="61. Lauv - I Like Me Better.mp3" type="audio/mpeg">
+            </audio>
+        </div>
     </div>
+    
+        
 
-    <script>
-        // JavaScript to control the slideshow
-        let slideIndex = 0;
-
-        // Function to change the slides
-        function showSlides() {
-            let slides = document.getElementsByClassName("mySlides");
-
-            // Hide all slides
-            for (let i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-
-            // Move to the next slide
-            slideIndex++;
-            if (slideIndex > slides.length) {
-                slideIndex = 1; // Reset to the first slide when the end is reached
-            }
-
-            // Show the current slide
-            slides[slideIndex - 1].style.display = "block";
-        }
-
-        // Start the slideshow
-        showSlides(); // Show the first slide
-        setInterval(showSlides, 3000); // Change slide every 3 seconds (3000 ms)
-    </script>
 
     <div id="birds"></div>
 
